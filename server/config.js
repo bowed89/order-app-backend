@@ -44,7 +44,7 @@ const con = new Client({
 (async () => {
     try {
         await con.connect();
-        console.log('conected');
+        console.log('connected');
     } catch (e) {
         console.log('Error happend while connecting to the DB: ', e.message)
     }
