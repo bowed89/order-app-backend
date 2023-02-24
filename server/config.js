@@ -18,7 +18,7 @@ const { Client } = require('pg');
 
 con.connect();
 
-*/
+
 
 
 //Conexion con BD LOCAL
@@ -31,14 +31,23 @@ const con = new Client({
 });
 
 //con.connect(); 
+*/
+
+
+const con = new Client({
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false
+    }
+});
 
 (async () => {
     try {
-     await con.connect();
-    console.log('conected');
-    } catch(e) {
-     console.log('Error happend while connecting to the DB: ', e.message)
+        await con.connect();
+        console.log('conected');
+    } catch (e) {
+        console.log('Error happend while connecting to the DB: ', e.message)
     }
-  })();
+})();
 
 module.exports = con; 
