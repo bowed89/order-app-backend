@@ -31,6 +31,6 @@ app.use(`${api}/products`, productsRouter);
 app.use(`${api}/categories`, categoriesRouter);
 
 app.listen(port, () => {
-    console.log(` Server is running on port1 ${port} `);
+    console.log(` Server is running on porta1 ${port} `);
 });
 

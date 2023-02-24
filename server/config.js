@@ -30,7 +30,15 @@ const con = new Client({
     port: 5432,
 });
 
-con.connect(); 
+//con.connect(); 
 
+(async () => {
+    try {
+     await con.connect();
+    console.log('conected');
+    } catch(e) {
+     console.log('Error happend while connecting to the DB: ', e.message)
+    }
+  })();
 
 module.exports = con; 
