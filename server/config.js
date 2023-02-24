@@ -22,7 +22,6 @@ con.connect();
 
 
 //Conexion con BD LOCAL
-
 const con = new Client({
     user: 'postgres',
     host: 'localhost',
