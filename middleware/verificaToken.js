@@ -14,7 +14,7 @@ const verificaToken = async (req, res, next) => {
         })
     }
     try {
-        await jwt.verify(token, seed);
+        await jwt.verify(token, `${process.env.JWT_SECRET}`);
         next();
     } catch (error) {
         console.log(error);

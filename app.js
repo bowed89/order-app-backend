@@ -26,10 +26,6 @@ const productsRouter = require('./routers/products');
 const categoriesRouter = require('./routers/categories');
 
 //Routers
-app.get('/hola', (req, res) => {
-    res.send({msg: "Pruebaa"})
-})
-
 app.use('/login', usersRouter);
 app.use('/clients', clientsRouter);
 app.use('/orders', ordersRouter);
