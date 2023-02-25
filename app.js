@@ -26,16 +26,15 @@ const productsRouter = require('./routers/products');
 const categoriesRouter = require('./routers/categories');
 
 //Routers
-app.use('/login', usersRouter);
 app.get('/hola', (req, res) => {
     res.send({msg: "Pruebaa"})
 })
 
-app.use(`${api}/login`, usersRouter);
-app.use(`${api}/clients`, clientsRouter);
-app.use(`${api}/orders`, ordersRouter);
-app.use(`${api}/products`, productsRouter);
-app.use(`${api}/categories`, categoriesRouter);
+app.use('/login', usersRouter);
+app.use('/clients', clientsRouter);
+app.use('/orders', ordersRouter);
+app.use('/products', productsRouter);
+app.use('/categories', categoriesRouter);
 
 app.listen(port, () => {
     console.log(` Server is running on porta1 ${port} `);
