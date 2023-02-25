@@ -11,8 +11,8 @@ const api = process.env.API_URL;
 
 // Permissions to communicate HTTP REQUEST 
 
-/* app.use(cors());
-app.options('*', cors()); */
+app.use(cors());
+app.options('*', cors());
 
 app.use(bp.json())
 app.use(bp.urlencoded({ extended: true }))
