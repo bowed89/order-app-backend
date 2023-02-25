@@ -15,6 +15,11 @@ router.get('/', async (req, res) => {
     res.send(response.rows)
 });
 
+router.post('/body', async (req, res) => {
+    const body = req.usuario;
+    res.send({ res: body })
+});
+
 // REGISTRAR NUEVO USUARIO
 router.post('/signup', async (req, res) => {
     var params = req.body;
