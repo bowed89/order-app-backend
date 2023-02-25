@@ -52,7 +52,7 @@ router.post('/', async (req, res) => {
 
         return res.status(200).json({
             res: generador,
-            token: generarJWT(generador)
+            //token: generarJWT(generador)
         })
     })
 });
