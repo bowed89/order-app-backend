@@ -1,5 +1,5 @@
-const jwt = require('jsonwebtoken');
-require('dotenv/config');
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 const generarJWT = (generador) => {
     return jwt.sign({ generador }, process.env.JWT_SECRET, {
