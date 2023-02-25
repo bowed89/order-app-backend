@@ -1,7 +1,8 @@
 import * as dotenv from 'dotenv';
+import * as jwt from 'jsonwebtoken';
+
 dotenv.config();
 
-const jwt = require('jsonwebtoken');
 
 const generarJWT = (generador) => {
     return jwt.sign({ generador }, process.env.JWT_SECRET, {
