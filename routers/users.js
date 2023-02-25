@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/body', async (req, res) => {
-    const body = req.usuario;
+    const body = req.body.usuario;
     res.send({ res: body })
 });
 
