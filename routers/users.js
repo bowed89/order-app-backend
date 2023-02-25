@@ -1,6 +1,6 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
-const router = express;
+const router = express.Router();
 const con = require('../server/config');
 const { generarJWT } = require('../helpers/generarJWT.js');
 const jwt = require('jsonwebtoken');
