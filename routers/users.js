@@ -35,7 +35,7 @@ router.post('/signup', async (req, res) => {
 
 
 //LOGIN
-router.post('/', async (req, res) => {
+router.post('/signin', async (req, res) => {
     if (!req.body.login || !req.body.password) return res.status(400).json({ msg: 'Por favor introduzca el Usuario y/o Contraseña' })
     const query = {
         text: 'SELECT * FROM usuario WHERE login=$1',
@@ -52,7 +52,7 @@ router.post('/', async (req, res) => {
 
         return res.status(200).json({
             res: generador,
-            //token: generarJWT(generador)
+            token: generarJWT(generador)
         })
     })
 });
