@@ -64,7 +64,7 @@ router.get('/renew', (req, res) => {
 
     if (token) {
         try {
-            payload = jwt.verify(token, process.env.JWT_SECRET); //decodifica el token
+            payload = jwt.verify(token, `${process.env.JWT_SECRET}`); //decodifica el token
             return res.status(200).json({
                 login: payload.generador.login,
                 token

@@ -2,7 +2,6 @@ const jwt = require('jsonwebtoken');
 
 //variable global 
 require('dotenv/config');
-const seed = process.env.JWT_SECRET;
 
 const verificaToken = async (req, res, next) => {
     let token = req.header('token');
