@@ -24,11 +24,11 @@ const productsRouter = require('./routers/products');
 const categoriesRouter = require('./routers/categories');
 
 //Routers
-app.use(`${api}/login`, usersRouter);
-app.use(`${api}/clients`, clientsRouter);
-app.use(`${api}/orders`, ordersRouter);
-app.use(`${api}/products`, productsRouter);
-app.use(`${api}/categories`, categoriesRouter);
+app.use(`/api/v1/login`, usersRouter);
+app.use(`/api/v1/clients`, clientsRouter);
+app.use(`/api/v1/orders`, ordersRouter);
+app.use(`/api/v1/products`, productsRouter);
+app.use(`/api/v1/categories`, categoriesRouter);
 
 app.listen(port, () => {
     console.log(` Server is running on port ${port} `);
