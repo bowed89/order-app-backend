@@ -1,13 +1,13 @@
 const { Client } = require('pg');
 
 // Conexion BD RAILWAY
-const con = new Client({
+/* const con = new Client({
     connectionString: process.env.DATABASE_URL,
     ssl: {
         rejectUnauthorized: false
     }
 });
-con.connect();
+con.connect(); */
 
 //Conexion con BD LOCAL
 /* const con = new Client({
@@ -20,5 +20,18 @@ con.connect();
 
 con.connect();  */
 
+// Conexion BD RAILWAY
+try {
+    const con = new Client({
+        connectionString: process.env.DATABASE_URL,
+        ssl: {
+            rejectUnauthorized: false
+        }
+    });
 
-module.exports = con; 
+    con.connect();
+    module.exports = con;
+
+} catch (error) {
+    console.error('Error al conectar a la base de datos:', error);
+}
