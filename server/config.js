@@ -15,11 +15,11 @@ con.connect();  */
 // Conexion BD RAILWAY
 try {
     const con = new Client({
-        user: process.env.USER,
-        host: process.env.HOST,
-        database: process.env.DATABASE,
-        password:process.env.PASSWORD,
-        port: process.env.PORT,
+        user: 'postgres',
+        host: 'roundhouse.proxy.rlwy.net',
+        database: 'CHUPITOS_DB',
+        password: 'ZdoWGkZBcCjmgjozEcwckEtMGoMQqehQ',
+        port: '56773', // Por defecto es 5432
     });
 
     con.connect();
