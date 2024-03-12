@@ -10,7 +10,7 @@ const { Client } = require('pg');
 con.connect(); */
 
 //Conexion con BD LOCAL
-/* const con = new Client({
+const con = new Client({
     user: 'postgres',
     host: 'localhost',
     database: 'CHUPITOS_DB',
@@ -18,10 +18,10 @@ con.connect(); */
     port: 5432,
 });
 
-con.connect();  */
+con.connect(); 
 
 // Conexion BD RAILWAY
-try {
+/* try {
     const con = new Client({
         connectionString: process.env.DATABASE_URL,
         ssl: {
@@ -35,3 +35,4 @@ try {
 } catch (error) {
     console.error('Error al conectar a la base de datos:', error);
 }
+ */
