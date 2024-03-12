@@ -329,6 +329,8 @@ router.get('/consolidar', async (req, res) => {
     }
 });
 
+module.exports = router;
+
 /* sxdddddddddddddddddddddddddddddddddddddddddddddddddddddddddd */
 
 
